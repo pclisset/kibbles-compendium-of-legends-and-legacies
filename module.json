@@ -28,7 +28,7 @@
 		}
 	],
 	"url": "https://github.com/pclisset/kibbles-compendium-of-legends-and-legacies/feature/warden-updates",
-	"manifest": "https://github.com/pclisset/kibbles-compendium-of-legends-and-legacies/releases/tag/testing/download/module.json",
+	"manifest": "https://raw.githubusercontent.com/pclisset/kibbles-compendium-of-legends-and-legacies/feature/warden-updates/module.json",
 	"download": "AUTOMATIC",
 	"esmodules": ["kcll.mjs"],
 	"languages": [{
@@ -182,5 +182,6 @@
 	}
 
 }
+
 
 
