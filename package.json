@@ -1,6 +1,6 @@
 {
   "name": "kibbles-compendium-of-legends-and-legacies",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Kibbles' Compendium of Legends and Legacies for Foundry VTT",
   "main": "kcll.js",
   "scripts": {
