@@ -27,9 +27,9 @@
 			"url": "modules/kibbles-compendium-of-legends-and-legacies/assets/Art-Cover-Full.jpg"
 		}
 	],
-	"url": "https://www.kthomebrew.com/",
-	"manifest": "https://github.com/KibblesTasty/kibbles-compendium-of-legends-and-legacies/releases/latest/download/module.json",
-	"download": "AUTOMATIC",
+	"url": "https://github.com/pclisset/kibbles-compendium-of-legends-and-legacies/tree/feature/warden-updates",
+	"manifest": "https://raw.githubusercontent.com/pclisset/kibbles-compendium-of-legends-and-legacies/tree/feature/warden-updates/module.json",
+	"download": "https://codeload.github.com/pclisset/kibbles-compendium-of-legends-and-legacies/zip/feature/warden-updates",
 	"esmodules": ["kcll.mjs"],
 	"languages": [{
 		"lang": "en",
@@ -180,4 +180,5 @@
 			]
 		}
 	}
+
 }
