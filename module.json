@@ -29,7 +29,7 @@
 	],
 	"url": "https://github.com/pclisset/kibbles-compendium-of-legends-and-legacies/feature/warden-updates",
 	"manifest": "https://raw.githubusercontent.com/pclisset/kibbles-compendium-of-legends-and-legacies/feature/warden-updates/module.json",
-	"download": "https://codeload.github.com/pclisset/kibbles-compendium-of-legends-and-legacies/zip/feature/warden-updates"",
+	"download": "https://codeload.github.com/pclisset/kibbles-compendium-of-legends-and-legacies/zip/feature/warden-updates",
 	"esmodules": ["kcll.mjs"],
 	"languages": [{
 		"lang": "en",
@@ -182,6 +182,7 @@
 	}
 
 }
+
 
 
 
