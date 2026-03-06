@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pclisset/kibbles-compendium-of-legends-and-legacies/feature/warden-updates.git"
+    "url": "git+https://github.com/pclisset/kibbles-compendium-of-legends-and-legacies.git#feature\/warden-updates"
   },
   "keywords": [
     "fvtt",
