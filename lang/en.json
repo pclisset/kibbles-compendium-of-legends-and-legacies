@@ -9,6 +9,7 @@
         "BloodMagic": {
             "Label": "Blood Magic",
             "Abbreviation": "B"
-        }
+        },
+        "ArmorClassMysticBulwark": "Mystic Bulwark AC"
     }
 }

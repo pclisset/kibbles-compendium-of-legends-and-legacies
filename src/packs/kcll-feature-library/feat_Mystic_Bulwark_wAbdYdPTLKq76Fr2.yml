@@ -46,6 +46,42 @@ effects:
       lastModifiedBy: null
       modifiedTime: null
     _key: '!items.effects!wAbdYdPTLKq76Fr2.t4YHkml34BhthtCv'
+  - name: Mystic Bulwark (Wisdom AC)
+    img: icons/magic/defensive/shield-barrier-flaming-pentagon-green.webp
+    _id: 3LSUVdoFHkmtikDo
+    type: base
+    system: {}
+    changes:
+      - key: system.attributes.ac.calc
+        mode: 5
+        value: wardenMysticBulwark
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.0
+      lastModifiedBy: null
+      modifiedTime: null
+    _key: '!items.effects!wAbdYdPTLKq76Fr2.3LSUVdoFHkmtikDo'
 flags:
   core: {}
 system:

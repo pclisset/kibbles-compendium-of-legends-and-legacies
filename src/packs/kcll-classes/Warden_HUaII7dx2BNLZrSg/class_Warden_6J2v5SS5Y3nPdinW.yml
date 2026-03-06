@@ -564,6 +564,24 @@ system:
         type: asi
       level: 8
       title: ''
+    - _id: pFIgHFLPjAU8gulm
+      type: AbilityScoreImprovement
+      configuration:
+        points: 2
+        fixed:
+          str: 0
+          dex: 0
+          con: 0
+          int: 0
+          wis: 0
+          cha: 0
+        cap: 2
+        locked: []
+        recommendation: null
+      value:
+        type: asi
+      level: 10
+      title: ''
     - _id: nROeTbeO8vrGjqAp
       type: AbilityScoreImprovement
       configuration:
