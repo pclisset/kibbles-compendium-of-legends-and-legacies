@@ -1,0 +1,84 @@
+name: Release
+
+# Runs when a version tag is pushed (e.g. git tag v1.2.3 && git push --tags).
+# Builds the module, creates a GitHub Release, attaches module.json and the
+# module zip, and updates the manifest/download URLs in module.json so Foundry
+# can install directly from the release.
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # Required to create GitHub Releases
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Compile packs (YML → LevelDB)
+        run: npm run pullYMLtoLDB
+
+      # Extract the version number from the tag (strips the leading "v")
+      - name: Get release version
+        id: version
+        run: echo "VERSION=${GITHUB_REF_NAME#v}" >> $GITHUB_OUTPUT
+
+      # Update module.json with the release version and the correct manifest
+      # and download URLs pointing to this specific release. This ensures
+      # Foundry's update checker works correctly.
+      - name: Update module.json for release
+        run: |
+          VERSION="${{ steps.version.outputs.VERSION }}"
+          REPO="${{ github.repository }}"
+          RELEASE_TAG="${{ github.ref_name }}"
+          node -e "
+            const fs = require('fs');
+            const m = JSON.parse(fs.readFileSync('module.json', 'utf8'));
+            m.version = '${VERSION}';
+            m.manifest = 'https://github.com/${REPO}/releases/latest/download/module.json';
+            m.download = 'https://github.com/${REPO}/releases/download/${RELEASE_TAG}/kibbles-compendium-of-legends-and-legacies.zip';
+            fs.writeFileSync('module.json', JSON.stringify(m, null, '\t'));
+          "
+
+      # Assemble everything Foundry needs into a staging directory, then zip.
+      - name: Assemble module
+        run: |
+          mkdir -p dist/kibbles-compendium-of-legends-and-legacies
+          cp module.json dist/kibbles-compendium-of-legends-and-legacies/
+          cp kcll.mjs dist/kibbles-compendium-of-legends-and-legacies/
+          cp kcll.css dist/kibbles-compendium-of-legends-and-legacies/
+          cp -r packs dist/kibbles-compendium-of-legends-and-legacies/
+          cp -r assets dist/kibbles-compendium-of-legends-and-legacies/ 2>/dev/null || true
+          cp -r lang dist/kibbles-compendium-of-legends-and-legacies/ 2>/dev/null || true
+
+      - name: Create module zip
+        run: |
+          cd dist
+          zip -r ../kibbles-compendium-of-legends-and-legacies.zip kibbles-compendium-of-legends-and-legacies/
+
+      # Create the GitHub Release and attach both the zip and the updated
+      # module.json. The manifest URL in module.json points to "latest" so
+      # Foundry always fetches the most recent release manifest.
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          generate_release_notes: true
+          files: |
+            kibbles-compendium-of-legends-and-legacies.zip
+            module.json
