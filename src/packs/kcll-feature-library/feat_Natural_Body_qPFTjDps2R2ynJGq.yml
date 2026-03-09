@@ -1,7 +1,43 @@
 name: Natural Body
 type: feat
 img: icons/magic/nature/leaf-juggle-humanoid-green.webp
-effects: []
+effects: 
+  - name: Natural Body
+    img: icons/magic/nature/leaf-juggle-humanoid-green.webp
+    _id: BwQD03lOpDlQ5kmj
+    type: base
+    system: {}
+    changes:
+      - key: system.traits.ci.value
+        mode: 2
+        value: disease
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.0
+      lastModifiedBy: null
+      modifiedTime: null
+    _key: '!items.effects!qPFTjDps2R2ynJGq.BwQD03lOpDlQ5kmj'
 flags:
   core: {}
 system:
