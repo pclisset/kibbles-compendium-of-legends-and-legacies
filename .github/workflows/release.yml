@@ -6,20 +6,20 @@ name: Release
 # can install directly from the release.
 
 on:
-  push:
-    tags:
-      - 'v*.*.*'
+  release:
+    types: [published]
 
 jobs:
   release:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # Required to create GitHub Releases
+      contents: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+        with:
+          ref: ${{ github.event.release.tag_name }}
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -74,11 +74,11 @@ jobs:
       # module.json. The manifest URL in module.json points to "latest" so
       # Foundry always fetches the most recent release manifest.
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
+        uses: ncipollo/release-action@v1
         with:
-          tag_name: ${{ github.ref_name }}
-          name: Release ${{ github.ref_name }}
-          generate_release_notes: true
-          files: |
-            kibbles-compendium-of-legends-and-legacies.zip
-            module.json
+          allowUpdates: true
+          artifacts: './kibbles-compendium-of-legends-and-legacies.zip, ./module.json'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.event.release.tag_name }}
+          omitBodyDuringUpdate: true
+          omitNameDuringUpdate: true
