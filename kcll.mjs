@@ -28,23 +28,61 @@ Hooks.once("init", () => {
   // Register the Mystic Bulwark AC calculation mode.
   CONFIG.DND5E.armorClasses.wardenMysticBulwark = {
     label: "KCLL.ArmorClassMysticBulwark",
-    formula: "@attributes.ac.armor + min(@abilities.wis.mod, @attributes.ac.maxDex)"
+    formula: "@attributes.ac.armor + min(@abilities.wis.mod, @flags.KCLL.maxDex)"
   };
 });
 
 /**
  * Inject the equipped armor's maximum dexterity bonus into roll data as
- * @attributes.ac.maxDex. This allows KCLL features to reference the armor's
+ * @flags.KCLL.maxDex. This allows KCLL features to reference the armor's
  * dex cap.
  *
  * When no armor is equipped, maxDex is set to 99
  */
-Hooks.on("dnd5e.getRollData", (actor, rollData) => {
+
+const MODULE_ID = "KCLL";
+
+async function _syncMaxDexFlag(actor) {
+  // Only process player characters and NPCs, not vehicles etc.
+  if (!["character", "npc"].includes(actor.type)) return;
+
   const equippedArmor = actor.items.find(item =>
     item.type === "equipment" &&
     item.system.equipped === true &&
     ["light", "medium", "heavy"].includes(item.system.armor?.type)
   );
+
+  // use 99 for null dex cap so min() never restricts stat modifier
   const maxDex = equippedArmor?.system.armor.dex ?? 99;
-  foundry.utils.setProperty(rollData, "attributes.ac.maxDex", maxDex);
+
+  // Avoid redundant writes to prevent re-trigger
+  const current = actor.getFlag(MODULE_ID, "maxDex");
+  if (current === maxDex) return;
+
+  await actor.setFlag(MODULE_ID, "maxDex", maxDex);
+}
+
+// Sync maxDex on actor update.
+Hooks.on("updateActor", (actor, _changes, _options, _userId) => {
+  _syncMaxDexFlag(actor);
+});
+
+//  Sync maxDex when equipping/unequipping armor
+Hooks.on("createItem", (item, _options, _userId) => {
+  if (item.parent instanceof Actor) _syncMaxDexFlag(item.parent);
+});
+
+Hooks.on("updateItem", (item, _changes, _options, _userId) => {
+  if (item.parent instanceof Actor) _syncMaxDexFlag(item.parent);
+});
+
+Hooks.on("deleteItem", (item, _options, _userId) => {
+  if (item.parent instanceof Actor) _syncMaxDexFlag(item.parent);
+});
+
+// Sync maxDex on world load
+Hooks.once("ready", () => {
+  for (const actor of game.actors) {
+    _syncMaxDexFlag(actor);
+  }
 });

@@ -10,7 +10,7 @@ effects:
     changes:
       - key: system.traits.ci.value
         mode: 2
-        value: disease
+        value: diseased
         priority: null
     disabled: false
     duration:
