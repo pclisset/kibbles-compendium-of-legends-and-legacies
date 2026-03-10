@@ -49,7 +49,7 @@ async function _syncMaxDexFlag(actor) {
   const equippedArmor = actor.items.find(item =>
     item.type === "equipment" &&
     item.system.equipped === true &&
-    ["light", "medium", "heavy"].includes(item.system.armor?.type)
+    ["light", "medium", "heavy"].includes(item.system.type?.value)
   );
 
   // use 99 for null dex cap so min() never restricts stat modifier
