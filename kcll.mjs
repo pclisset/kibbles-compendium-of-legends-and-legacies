@@ -28,7 +28,7 @@ Hooks.once("init", () => {
   // Register the Mystic Bulwark AC calculation mode.
   CONFIG.DND5E.armorClasses.wardenMysticBulwark = {
     label: "KCLL.ArmorClassMysticBulwark",
-    formula: "@attributes.ac.armor + min(@abilities.wis.mod, @flags.KCLL.maxDex)"
+    formula: "@attributes.ac.armor + min(@abilities.wis.mod, @flags.kibbles-compendium-of-legends-and-legacies.maxDex)"
   };
 });
 
@@ -40,7 +40,7 @@ Hooks.once("init", () => {
  * When no armor is equipped, maxDex is set to 99
  */
 
-const MODULE_ID = "KCLL";
+const MODULE_ID = "kibbles-compendium-of-legends-and-legacies";
 
 async function _syncMaxDexFlag(actor) {
   // Only process player characters and NPCs, not vehicles etc.
