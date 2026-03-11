@@ -101,8 +101,8 @@ system:
       types:
         - bludgeoning
       custom:
-        enabled: false
-        formula: ''
+        enabled: true
+        formula: 'kcllUpgradeDie(6, @scale.warden.natural-weapon-upgrades)'
       scaling:
         mode: ''
         number: null

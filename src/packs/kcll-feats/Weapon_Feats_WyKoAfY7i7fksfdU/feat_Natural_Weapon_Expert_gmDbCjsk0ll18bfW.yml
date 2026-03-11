@@ -34,7 +34,43 @@ system:
   requirements: Have one or more natural weapons
   advancement: []
   crewed: false
-effects: []
+effects:
+  - name: Natural Weapon Expert
+    img: icons/creatures/abilities/paw-print-orange.webp
+    _id: 51mauczAcJRH5twx
+    type: base
+    system: {}
+    changes:
+      - key: system.scale.warden.natural-weapon-upgrades
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.0
+      lastModifiedBy: null
+      modifiedTime: null
+    _key: '!items.effects!gmDbCjsk0ll18bfW.51mauczAcJRH5twx'
 sort: 0
 ownership:
   default: 0

@@ -1,17 +1,52 @@
 name: Savage Weapons
 type: feat
 img: icons/creatures/claws/claw-talons-glowing-orange.webp
-effects: []
+effects: 
+  - name: Savage Weapons
+    img: icons/creatures/claws/claw-talons-glowing-orange.webp
+    _id: Ol4SlEnoo54Msns6
+    type: base
+    system: {}
+    changes:
+      - key: system.scale.warden.natural-weapon-upgrades
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.0
+      lastModifiedBy: null
+      modifiedTime: null
+    _key: '!items.effects!OvxMmtddYpTaS4YF.Ol4SlEnoo54Msns6'
 flags:
   core: {}
 system:
   description:
     value: >-
-      <p>When you roll a saving throw against an area of effect spell or magical
-      effect that does damage, you can roll your save with disadvantage to
-      shield your allies.</p><p> When you do so allied creatures in the area of
-      your Primal Interdiction gain resistance to the damage taken from the
-      effect.</p>
+      <p>The damage dice of all natural weapons granted by 
+      the class increases by 1 size (for example, a d6 
+      becomes a d8). If a weapon has multiple dice, only 
+      one die increases.</p>
     chat: ''
   source:
     rules: '2014'

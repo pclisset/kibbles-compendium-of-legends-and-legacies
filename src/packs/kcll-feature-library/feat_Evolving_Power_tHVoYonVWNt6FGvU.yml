@@ -1,7 +1,43 @@
 name: Evolving Power
 type: feat
 img: icons/creatures/claws/claw-bear-paw-swipe-brown.webp
-effects: []
+effects:
+  - name: Evolving Power
+    img: icons/creatures/claws/claw-bear-paw-swipe-brown.webp
+    _id: B3tvmB9S5hxTqS6p
+    type: base
+    system: {}
+    changes:
+      - key: system.scale.warden.natural-weapon-upgrades
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.0
+      lastModifiedBy: null
+      modifiedTime: null
+    _key: '!items.effects!tHVoYonVWNt6FGvU.B3tvmB9S5hxTqS6p'
 flags:
   core: {}
 system:

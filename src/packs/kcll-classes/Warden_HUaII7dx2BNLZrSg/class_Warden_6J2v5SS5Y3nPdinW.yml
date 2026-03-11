@@ -347,6 +347,19 @@ system:
       value: {}
       title: Bulwark Reduction
       hint: ''
+    - _id: wYspdhKpKeBMC6Ti
+      type: ScaleValue
+      configuration:
+        identifier: natural-weapon-upgrades
+        type: number
+        distance:
+          units: ''
+        scale:
+          '1':
+            value: 0
+      value: {}
+      title: Natural Weapon Upgrades
+      hint: ''
     - _id: z4I5KQ4O6LSOWkZY
       type: Subclass
       configuration: {}

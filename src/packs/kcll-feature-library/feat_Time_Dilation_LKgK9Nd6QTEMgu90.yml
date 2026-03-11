@@ -209,11 +209,11 @@ effects:
         priority: null
       - key: system.bonuses.mwak.attack
         mode: 2
-        value: '-1d4'
+        value: '-kcllUpgradeDie(4, @scale.warden.natural-weapon-upgrades)'
         priority: null
       - key: system.bonuses.rwak.attack
         mode: 2
-        value: '-1d4'
+        value: '-kcllUpgradeDie(4, @scale.warden.natural-weapon-upgrades)'
         priority: null
       - key: ''
         mode: 2
