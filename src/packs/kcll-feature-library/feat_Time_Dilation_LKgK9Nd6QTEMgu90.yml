@@ -209,11 +209,11 @@ effects:
         priority: null
       - key: system.bonuses.mwak.attack
         mode: 2
-        value: '-kcllUpgradeDie(4, @scale.warden.natural-weapon-upgrades)'
+        value: '-1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie4'
         priority: null
       - key: system.bonuses.rwak.attack
         mode: 2
-        value: '-kcllUpgradeDie(4, @scale.warden.natural-weapon-upgrades)'
+        value: '-1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie4'
         priority: null
       - key: ''
         mode: 2

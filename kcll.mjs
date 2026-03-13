@@ -25,32 +25,57 @@ Hooks.once("init", () => {
     reference: "Compendium.kibbles-compendium-of-legends-and-legacies.kcll-journals.JournalEntry.NXibCQQFLkrAGE1i.JournalEntryPage.8t64sXFlxtCVP3b1",
   };
 
-  // Register the natural weapon die upgrade helper for Warden
-  const KCLL_DIE_PROGRESSION = [4, 6, 8, 10, 12];
-  CONFIG.Dice.functions.kcllUpgradeDie = function(baseDenom, upgrades) {
-    const base = Number(baseDenom);
-    const steps = Math.max(0, Math.floor(Number(upgrades)));
-    const startIdx = KCLL_DIE_PROGRESSION.indexOf(base);
-    if (startIdx === -1) return `1d${base}`; // unknown base, return as-is
-    const finalIdx = Math.min(startIdx + steps, KCLL_DIE_PROGRESSION.length - 1);
-    return `1d${KCLL_DIE_PROGRESSION[finalIdx]}`;
-  };
-
   // Register the Mystic Bulwark AC calculation mode.
   CONFIG.DND5E.armorClasses.wardenMysticBulwark = {
     label: "KCLL.ArmorClassMysticBulwark",
-    formula: "@attributes.ac.armor + @flags.kibbles-compendium-of-legends-and-legacies.acWis)"
+    formula: "@flags.kibbles-compendium-of-legends-and-legacies.mysticBulwarkAC"
   };
 });
 
-/**
- * Calculates the maximum possible wisdeom bonus to AC and adds to roll data as
- * @flags.KCLL.acWis. Needed for the Warden's mystical bulwark AC calculation.
- */
+
 
 const MODULE_ID = "kibbles-compendium-of-legends-and-legacies";
+// Die progression table, capped at d12 per module policy.
+const KCLL_DIE_PROGRESSION = [4, 6, 8, 10, 12];
 
-async function _syncACWisFlag(actor) {
+/**
+ * Given a base denomination and an upgrade count, returns the final
+ * denomination integer (not a die string). Capped at 12
+ */
+function _upgradedDenomination(baseDenom, upgrades) {
+  const startIdx = KCLL_DIE_PROGRESSION.indexOf(baseDenom);
+  if (startIdx === -1) return baseDenom; // unknown base, pass through
+  const finalIdx = Math.min(startIdx + upgrades, KCLL_DIE_PROGRESSION.length - 1);
+  return KCLL_DIE_PROGRESSION[finalIdx];
+}
+
+async function _syncNaturalWeaponDieFlags(actor) {
+  if (!["character", "npc"].includes(actor.type)) return;
+
+  const upgrades = Math.max(0, Math.floor(
+    actor.system?.scale?.warden?.["natural-weapon-upgrades"]?.value ?? 0
+  ));
+
+  const updates = {};
+  for (const base of [4, 6, 8]) {
+    const key = `naturalWeaponDie${base}`;
+    const newVal = _upgradedDenomination(base, upgrades);
+    const current = actor.getFlag(MODULE_ID, key);
+    if (current !== newVal) updates[key] = newVal;
+  }
+
+  if (Object.keys(updates).length === 0) return;
+
+  // setFlag one key at a time to avoid flag-merge conflict.
+  for (const [key, val] of Object.entries(updates)) {
+    await actor.setFlag(MODULE_ID, key, val);
+  }
+}
+
+/**
+ * Calculates the mystic bulwark AC
+ */
+async function _syncMysticBulwarkACFlag(actor) {
   // Only process player characters and NPCs, not vehicles etc.
   if (!["character", "npc"].includes(actor.type)) return;
 
@@ -61,38 +86,42 @@ async function _syncACWisFlag(actor) {
   );
 
   // use 99 for null dex cap so min() never restricts stat modifier
+  const armorBase = equippedArmor?.system.armor.value ?? 10;
   const maxDex = equippedArmor?.system.armor.dex ?? 99;
+  const wisModCapped = Math.min(actor.system.abilities.wis.mod, maxDex);
 
-  const acWis = actor.system.abilities.wis.mod < maxDex ? actor.system.abilities.wis.mod : maxDex;
+  const mysticBulwarkAC = armorBase + wisModCapped;
 
   // Avoid redundant writes to prevent re-trigger
-  const current = actor.getFlag(MODULE_ID, "acWis");
-  if (current === acWis) return;
+  const current = actor.getFlag(MODULE_ID, "mysticBulwarkAC");
+  if (current === mysticBulwarkAC) return;
 
-  await actor.setFlag(MODULE_ID, "acWis", acWis);
+  await actor.setFlag(MODULE_ID, "mysticBulwarkAC", mysticBulwarkAC);
 }
 
-// Sync maxDex on actor update.
+// Sync mysticBulwarkAC & NaturalWeaponDieFlags on actor update.
 Hooks.on("updateActor", (actor, _changes, _options, _userId) => {
-  _syncACWisFlag(actor);
+  _syncMysticBulwarkACFlag(actor);
+  _syncNaturalWeaponDieFlags(actor)
 });
 
-//  Sync maxDex when equipping/unequipping armor
+//  Sync mysticBulwarkAC when equipping/unequipping armor
 Hooks.on("createItem", (item, _options, _userId) => {
-  if (item.parent instanceof Actor) _syncACWisFlag(item.parent);
+  if (item.parent instanceof Actor) _syncMysticBulwarkACFlag(item.parent);
 });
 
 Hooks.on("updateItem", (item, _changes, _options, _userId) => {
-  if (item.parent instanceof Actor) _syncACWisFlag(item.parent);
+  if (item.parent instanceof Actor) _syncMysticBulwarkACFlag(item.parent);
 });
 
 Hooks.on("deleteItem", (item, _options, _userId) => {
-  if (item.parent instanceof Actor) _syncACWisFlag(item.parent);
+  if (item.parent instanceof Actor) _syncMysticBulwarkACFlag(item.parent);
 });
 
-// Sync maxDex on world load
+// Sync mysticBulwarkAC & NaturalWeaponDieFlags on world load
 Hooks.once("ready", () => {
   for (const actor of game.actors) {
-    _syncACWisFlag(actor);
+    _syncMysticBulwarkACFlag(actor);
+    _syncNaturalWeaponDieFlags(actor)
   }
 });

@@ -102,7 +102,7 @@ system:
         - bludgeoning
       custom:
         enabled: true
-        formula: 'kcllUpgradeDie(6, @scale.warden.natural-weapon-upgrades)'
+        formula: '1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie6 + @mod'
       scaling:
         mode: ''
         number: null
