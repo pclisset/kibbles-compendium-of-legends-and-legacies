@@ -53,7 +53,7 @@ async function _syncNaturalWeaponDieFlags(actor) {
   if (!["character", "npc"].includes(actor.type)) return;
 
   const upgrades = Math.max(0, Math.floor(
-    actor.system?.scale?.warden?.["natural-weapon-upgrades"]?.value ?? 0
+    actor.system?.scale?.warden?.['natural-weapon-upgrades'] ?? 0
   ));
 
   const updates = {};

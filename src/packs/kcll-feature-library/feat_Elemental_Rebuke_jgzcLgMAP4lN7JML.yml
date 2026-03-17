@@ -46,7 +46,7 @@ system:
       <p>You learn the spell Aldricor’s elemental rebuke. You don’t need any
       components to cast it, and can cast it once without expending a spell
       slot. Once you do so, you cannot do so again until you complete a long
-      rest. You can cast it again early be expending 2 Endurance Dice.</p>
+      rest. You can cast it again early by expending 2 Endurance Dice.</p>
     chat: ''
   identifier: elemental-rebuke
   source:

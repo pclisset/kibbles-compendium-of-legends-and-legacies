@@ -67,12 +67,12 @@ system:
     max: '@abilities.wis.mod'
   description:
     value: >-
-      <p>You gain the ability greatly speed up your own actions within narrow
+      <p>You gain the ability to greatly speed up your own actions within narrow
       limitations, allowing you to very quickly don or doff, change clothes, or
-      complete simple task that would take less than a minute in an action. You
+      complete simple tasks that would take less than a minute in an action. You
       cannot move from your space, interact with other creatures, cast spells,
       attack, or make ability checks during this action.</p><p> You can use this
-      ability an number of times equal to your Wisdom modifier, regaining all
+      ability a number of times equal to your Wisdom modifier, regaining all
       uses on a long rest.</p>
     chat: ''
   identifier: time-trick
