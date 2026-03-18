@@ -52,7 +52,7 @@ system:
     versatile:
       number: null
       denomination: null
-      bonus: ''
+      bonus: '@mod'
       types: []
       custom:
         enabled: false
@@ -68,8 +68,8 @@ system:
       types:
         - fire
       custom:
-        enabled: false
-        formula: ''
+        enabled: true
+        formula: '1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie6'
       scaling:
         mode: ''
         number: null

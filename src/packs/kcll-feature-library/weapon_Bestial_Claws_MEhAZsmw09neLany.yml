@@ -97,11 +97,11 @@ system:
           allow: false
         parts:
           - custom:
-              enabled: false
-              formula: ''
+              enabled: true
+              formula: '1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie6'
             number: 1
             denomination: 6
-            bonus: ''
+            bonus: '@mod'
             types:
               - slashing
             scaling:

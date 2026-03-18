@@ -64,6 +64,12 @@ async function _syncNaturalWeaponDieFlags(actor) {
     if (current !== newVal) updates[key] = newVal;
   }
 
+  // Split-damage advancing die.
+  const splitKey = "naturalWeaponDie4Minus1";
+  const splitVal = _upgradedDenomination(4, Math.max(0, upgrades - 1));
+  const splitCurrent = actor.getFlag(MODULE_ID, splitKey);
+  if (splitCurrent !== splitVal) updates[splitKey] = splitVal;
+
   if (Object.keys(updates).length === 0) return;
 
   // setFlag one key at a time to avoid flag-merge conflict.
@@ -99,29 +105,35 @@ async function _syncMysticBulwarkACFlag(actor) {
   await actor.setFlag(MODULE_ID, "mysticBulwarkAC", mysticBulwarkAC);
 }
 
+/**
+ * Sync all KCLL-managed flags for a given actor.
+ */
+async function _syncActorFlags(actor) {
+  await _syncMysticBulwarkACFlag(actor);
+  await _syncNaturalWeaponDieFlags(actor);
+}
+
 // Sync mysticBulwarkAC & NaturalWeaponDieFlags on actor update.
 Hooks.on("updateActor", (actor, _changes, _options, _userId) => {
-  _syncMysticBulwarkACFlag(actor);
-  _syncNaturalWeaponDieFlags(actor)
+  _syncActorFlags(actor);
 });
 
 //  Sync mysticBulwarkAC when equipping/unequipping armor
 Hooks.on("createItem", (item, _options, _userId) => {
-  if (item.parent instanceof Actor) _syncMysticBulwarkACFlag(item.parent);
+  if (item.parent instanceof Actor) _syncActorFlags(item.parent);
 });
 
 Hooks.on("updateItem", (item, _changes, _options, _userId) => {
-  if (item.parent instanceof Actor) _syncMysticBulwarkACFlag(item.parent);
+  if (item.parent instanceof Actor) _syncActorFlags(item.parent);
 });
 
 Hooks.on("deleteItem", (item, _options, _userId) => {
-  if (item.parent instanceof Actor) _syncMysticBulwarkACFlag(item.parent);
+  if (item.parent instanceof Actor) __syncActorFlags(item.parent);
 });
 
 // Sync mysticBulwarkAC & NaturalWeaponDieFlags on world load
 Hooks.once("ready", () => {
   for (const actor of game.actors) {
-    _syncMysticBulwarkACFlag(actor);
-    _syncNaturalWeaponDieFlags(actor)
+    _syncActorFlags(actor);
   }
 });

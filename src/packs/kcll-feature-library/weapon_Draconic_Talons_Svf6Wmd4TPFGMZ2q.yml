@@ -166,10 +166,11 @@ system:
       types:
         - slashing
       custom:
-        enabled: false
+        enabled: true
+        formula: '1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie6'
       scaling:
         number: 1
-      bonus: ''
+      bonus: '@mod'
     versatile:
       number: null
       denomination: null
