@@ -42,10 +42,19 @@ system:
           threshold: null
         flat: false
         type: {}
-      damage:
+      damage: 
         critical: {}
-        includeBase: true
-        parts: []
+        base:
+          number: 1
+          denomination: 8
+          types:
+            - slashing
+          custom:
+            enabled: true
+            formula: '1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie8'
+          bonus: '@mod'  
+          scaling:
+            number: 1
       flags: {}
       visibility:
         level: {}
@@ -97,11 +106,11 @@ system:
           allow: false
         parts:
           - custom:
-              enabled: true
-              formula: '1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie6'
+              enabled: false
+              formula: ''
             number: 1
             denomination: 6
-            bonus: '@mod'
+            bonus: ''
             types:
               - slashing
             scaling:

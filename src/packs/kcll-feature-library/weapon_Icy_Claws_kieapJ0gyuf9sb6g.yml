@@ -63,13 +63,13 @@ system:
     base:
       number: 1
       denomination: 6
-      bonus: ''
+      bonus: '@mod'
       types:
         - cold
         - slashing
       custom:
-        enabled: true
-        formula: '1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie6'
+        enabled: false
+        formula: ''
       scaling:
         mode: ''
         number: null
@@ -220,7 +220,7 @@ system:
         requireMagic: false
     jfJ8wAn8IPPXvTOh:
       type: attack
-      name: Icy Claws (Split)
+      name: Icy Claws (Split Colder)
       _id: jfJ8wAn8IPPXvTOh
       sort: 100
       activation:
@@ -235,7 +235,7 @@ system:
           max: ''
         spellSlot: true
       description:
-        chatFlavor: 'Split damage (d8+ threshold). Fixed 1d4 slashing + growing 1d cold.'
+        chatFlavor: 'Split damage (d8+ threshold). Fixed 1d4 slashing + growing 1d4 cold.'
       duration:
         concentration: false
         units: inst
@@ -292,10 +292,92 @@ system:
               number: 0
           - custom:
               enabled: true
-              formula: '1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie4Minus1'
+              formula: '1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie4Minus1 + @mod'
             number: 1
             denomination: 4
-            bonus: '@mod'
+            bonus: ''
+            types:
+              - cold
+            scaling:
+              number: 0
+    8IPPXvTOhjfJ8wAn:
+      type: attack
+      name: Icy Claws (Split Sharper)
+      _id: 8IPPXvTOhjfJ8wAn
+      sort: 100
+      activation:
+        type: action
+        value: 1
+        condition: ''
+        override: false
+      consumption:
+        targets: []
+        scaling:
+          allowed: false
+          max: ''
+        spellSlot: true
+      description:
+        chatFlavor: 'Split damage (d8+ threshold). Growing 1d4 slashing + fixed 1d4 slashing.'
+      duration:
+        concentration: false
+        units: inst
+        special: ''
+        override: false
+      effects: []
+      range:
+        units: ft
+        special: ''
+        override: false
+      target:
+        template:
+          count: ''
+          contiguous: false
+          type: ''
+          size: ''
+          width: ''
+          height: ''
+          units: ft
+        affects:
+          count: '1'
+          type: creature
+          choice: false
+          special: ''
+        prompt: true
+        override: false
+      uses:
+        spent: 0
+        max: ''
+        recovery: []
+      attack:
+        ability: ''
+        bonus: ''
+        critical:
+          threshold: null
+        flat: false
+        type:
+          value: melee
+          classification: weapon
+      damage:
+        critical:
+          bonus: ''
+        includeBase: false
+        parts:
+          - custom:
+              enabled: true
+              formula: '1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie4Minus1 + @mod'
+            number: 1
+            denomination: 4
+            bonus: ''
+            types:
+              - slashing
+            scaling:
+              number: 0
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 4
+            bonus: ''
             types:
               - cold
             scaling:

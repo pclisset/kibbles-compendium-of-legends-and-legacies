@@ -128,7 +128,7 @@ Hooks.on("updateItem", (item, _changes, _options, _userId) => {
 });
 
 Hooks.on("deleteItem", (item, _options, _userId) => {
-  if (item.parent instanceof Actor) __syncActorFlags(item.parent);
+  if (item.parent instanceof Actor) _syncActorFlags(item.parent);
 });
 
 // Sync mysticBulwarkAC & NaturalWeaponDieFlags on world load

@@ -92,7 +92,7 @@ system:
               formula: ''
             number: 1
             denomination: 6
-            bonus: ''
+            bonus: '@mod'
             types:
               - fire
               - radiant
@@ -106,7 +106,7 @@ system:
         requireMagic: false
     r0kjWuf9m3Fw629C:
       type: attack
-      name: Radiant Blast (Split)
+      name: Radiant Blast (Split Brighter)
       _id: r0kjWuf9m3Fw629C
       sort: 100
       activation:
@@ -120,7 +120,7 @@ system:
         spellSlot: true
         targets: []
       description:
-        chatFlavor: 'Split damage (d8+ threshold). Fixed 1d4 fire + growing 1d radiant.'
+        chatFlavor: 'Split damage (d8+ threshold). Fixed 1d4 fire + growing 1d4 radiant.'
       duration:
         units: inst
         concentration: false
@@ -172,10 +172,92 @@ system:
               number: 0
           - custom:
               enabled: true
-              formula: '1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie4Minus1'
+              formula: '1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie4Minus1 + @mod'
             number: 1
             denomination: 4
-            bonus: '@mod'
+            bonus: ''
+            types:
+              - radiant
+            scaling:
+              number: 0
+      flags: {}
+      visibility:
+        level: {}
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+  9m3Fw629Cr0kjWuf:
+      type: attack
+      name: Radiant Blast (Split Hotter)
+      _id: 9m3Fw629Cr0kjWuf
+      sort: 100
+      activation:
+        type: action
+        value: null
+        override: false
+        condition: ''
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets: []
+      description:
+        chatFlavor: 'Split damage (d8+ threshold). Growing 1d4 fire + fixed 1d4 radiant.'
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects: []
+      range:
+        override: false
+        units: ft
+        special: ''
+        value: '120'
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          count: ''
+          type: creature
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      attack:
+        critical:
+          threshold: null
+        flat: false
+        type:
+          value: ranged
+          classification: weapon
+        ability: str
+        bonus: ''
+      damage:
+        critical:
+          bonus: ''
+        includeBase: false
+        parts:
+          - custom:
+              enabled: true
+              formula: '1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie4Minus1 + @mod'
+            number: 1
+            denomination: 4
+            bonus: ''
+            types:
+              - fire
+            scaling:
+              number: 0
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 4
+            bonus: ''
             types:
               - radiant
             scaling:

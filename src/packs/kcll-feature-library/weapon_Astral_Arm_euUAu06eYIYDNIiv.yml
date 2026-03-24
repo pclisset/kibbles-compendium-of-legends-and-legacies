@@ -117,7 +117,7 @@ system:
       types:
         - force
       custom:
-        enabled: false
+        enabled: true
         formula: '1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie4'
       scaling:
         number: 1
