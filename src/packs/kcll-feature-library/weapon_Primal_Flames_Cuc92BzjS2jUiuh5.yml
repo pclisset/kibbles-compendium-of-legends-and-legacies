@@ -68,8 +68,8 @@ system:
       types:
         - fire
       custom:
-        enabled: true
-        formula: '1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie6'
+        enabled: false
+        formula: ''
       scaling:
         mode: ''
         number: null

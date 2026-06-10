@@ -183,7 +183,7 @@ system:
         requireMagic: false
     sIsgqJfoksX9h4tf:
       type: forward
-      name: Detect Magic
+      name: Detect Magic: Use Endurance Dice
       _id: sIsgqJfoksX9h4tf
       sort: 150000
       activation:
@@ -197,8 +197,7 @@ system:
         targets:
           - type: itemUses
             value: '2'
-            target: >-
-              Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.M9Hd7FvIRs06IDmg
+            target: Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.M9Hd7FvIRs06IDmg
             scaling: {}
       description:
         chatFlavor: ''
@@ -217,7 +216,7 @@ system:
         requireMagic: false
     EcuwCmRAkoi8OqZS:
       type: forward
-      name: Misty Step
+      name: Misty Step: Use Endurance Dice
       _id: EcuwCmRAkoi8OqZS
       sort: 300000
       activation:
@@ -231,8 +230,7 @@ system:
         targets:
           - type: itemUses
             value: '3'
-            target: >-
-              Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.M9Hd7FvIRs06IDmg
+            target: Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.M9Hd7FvIRs06IDmg
             scaling: {}
       description:
         chatFlavor: ''
@@ -251,7 +249,7 @@ system:
         requireMagic: false
     JQ1AGhKLWKjc96kU:
       type: forward
-      name: Dimension Door
+      name: Dimension Door: Use Endurance Dice
       _id: JQ1AGhKLWKjc96kU
       sort: 600000
       activation:
@@ -265,8 +263,7 @@ system:
         targets:
           - type: itemUses
             value: '5'
-            target: >-
-              Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.M9Hd7FvIRs06IDmg
+            target: Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.M9Hd7FvIRs06IDmg
             scaling: {}
       description:
         chatFlavor: ''
@@ -286,8 +283,7 @@ system:
     iUkP1rOpnhNNwPBe:
       type: cast
       spell:
-        uuid: >-
-          Compendium.kibbles-compendium-of-legends-and-legacies.kcll-spells-vol-2.Item.qxxgJ27cfIEc5ZEP
+        uuid: Compendium.kibbles-compendium-of-legends-and-legacies.kcll-spells-vol-2.Item.qxxgJ27cfIEc5ZEP
         challenge:
           attack: null
           save: null
@@ -465,7 +461,7 @@ system:
         requireMagic: false
     YfUhP9oSvdMHaISP:
       type: forward
-      name: Arcane Conduit
+      name: Arcane Conduit: Use Endurance Dice
       _id: YfUhP9oSvdMHaISP
       sort: 187500
       activation:
@@ -479,8 +475,7 @@ system:
         targets:
           - type: itemUses
             value: '3'
-            target: >-
-              Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.M9Hd7FvIRs06IDmg
+            target: Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.M9Hd7FvIRs06IDmg
             scaling: {}
       description:
         chatFlavor: ''
@@ -499,7 +494,7 @@ system:
         requireMagic: false
     Tjonmoep0YYEY9sc:
       type: forward
-      name: Ghost Step
+      name: Ghost Step: Use Endurance Dice
       _id: Tjonmoep0YYEY9sc
       sort: 375000
       activation:
@@ -513,8 +508,7 @@ system:
         targets:
           - type: itemUses
             value: '4'
-            target: >-
-              Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.M9Hd7FvIRs06IDmg
+            target: Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.M9Hd7FvIRs06IDmg
             scaling: {}
       description:
         chatFlavor: ''
@@ -533,7 +527,7 @@ system:
         requireMagic: false
     cKKRwEmCNJBZ01Rp:
       type: forward
-      name: Dimension Cutter
+      name: Dimension Cutter: Use Endurance Dice
       _id: cKKRwEmCNJBZ01Rp
       sort: 393750
       activation:
@@ -547,8 +541,7 @@ system:
         targets:
           - type: itemUses
             value: '5'
-            target: >-
-              Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.M9Hd7FvIRs06IDmg
+            target: Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.M9Hd7FvIRs06IDmg
             scaling: {}
       description:
         chatFlavor: ''

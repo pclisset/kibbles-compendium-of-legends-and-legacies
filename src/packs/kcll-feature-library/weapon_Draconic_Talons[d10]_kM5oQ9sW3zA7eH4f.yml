@@ -1,12 +1,61 @@
-name: Astral Arm
+name: Draconic Talons [d10]
 type: weapon
-_id: euUAu06eYIYDNIiv
-img: icons/skills/melee/unarmed-punch-fist-blue.webp
+_id: kM5oQ9sW3zA7eH4f
+img: icons/creatures/claws/claw-scaled-red.webp
 system:
   activities:
-    wbY6YU2k1WbMMM4J:
-      _id: wbY6YU2k1WbMMM4J
+    lN6pR1tX4aB8fI5g:
+      _id: lN6pR1tX4aB8fI5g
       type: attack
+      sort: 0
+      activation:
+        type: action
+        value: null
+        override: false
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets: []
+      description: {}
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects: []
+      range:
+        override: false
+        units: self
+      target:
+        template:
+          contiguous: false
+          units: ft
+        affects:
+          choice: false
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+      attack:
+        critical:
+          threshold: null
+        flat: false
+        type: {}
+      damage:
+        critical: {}
+        includeBase: true
+        parts: []
+      flags: {}
+      visibility:
+        level: {}
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+    mO7qS2uY5bC9gJ6h:
+      type: damage
+      name: Grapple Damage
+      _id: mO7qS2uY5bC9gJ6h
       sort: 0
       activation:
         type: action
@@ -43,21 +92,20 @@ system:
         spent: 0
         recovery: []
         max: ''
-      attack:
-        critical:
-          threshold: null
-        flat: false
-        type:
-          value: melee
-          classification: ''
-        ability: wis
-        bonus: ''
       damage:
         critical:
-          bonus: ''
-        includeBase: true
-        parts: []
-      name: ''
+          allow: false
+        parts:
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 6
+            bonus: ''
+            types:
+              - slashing
+            scaling:
+              number: 1
       flags: {}
       visibility:
         level: {}
@@ -70,13 +118,14 @@ system:
     max: ''
   description:
     value: >-
-      <p>These are natural melee weapons with the Light property which deal 1d4
-      force damage on hit. You can additionally use them to grapple creatures
-      and make unarmed strikes with them. You can use your Wisdom modifier in
-      place of your Strength or Dexterity modifier for attack and damage rolls
-      made with these weapons.</p>
+      <p>A set of draconic talons extending from one of your hands. This becomes
+      a natural one handed melee weapon that deals 1d10 slashing damage on hit,
+      and has the Light and Special properties.</p><p><strong>Special:</strong>
+      This weapon counts as a free hand for the purposes of grappling. When you
+      successfully initiate a grapple with it, the target takes 1d6 slashing
+      damage.</p>
     chat: ''
-  identifier: astral-arm
+  identifier: draconic-talons
   source:
     revision: 1
     rules: '2014'
@@ -113,9 +162,9 @@ system:
   damage:
     base:
       number: 1
-      denomination: 4
+      denomination: 10
       types:
-        - force
+        - slashing
       custom:
         enabled: false
         formula: ''
@@ -133,6 +182,7 @@ system:
   magicalBonus: null
   properties:
     - lgt
+    - spc
   proficient: null
   range:
     value: null
@@ -144,7 +194,7 @@ system:
     value: []
 effects: []
 folder: null
-sort: 12800000
+sort: 8600000
 ownership:
   default: 0
 flags:
@@ -159,7 +209,7 @@ _stats:
   coreVersion: '13.351'
   systemId: dnd5e
   systemVersion: 5.2.0
-  createdTime: 1764610584461
+  createdTime: 1764610573374
   modifiedTime: null
   lastModifiedBy: null
-_key: '!items!euUAu06eYIYDNIiv'
+_key: '!items!kM5oQ9sW3zA7eH4f'

@@ -171,11 +171,11 @@ system:
             scaling:
               number: 0
           - custom:
-              enabled: true
-              formula: '1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie4Minus1 + @mod'
+              enabled: false
+              formula: ''
             number: 1
             denomination: 4
-            bonus: ''
+            bonus: '@mod'
             types:
               - radiant
             scaling:
@@ -243,11 +243,11 @@ system:
         includeBase: false
         parts:
           - custom:
-              enabled: true
-              formula: '1d@flags.kibbles-compendium-of-legends-and-legacies.naturalWeaponDie4Minus1 + @mod'
+              enabled: false
+              formula: ''
             number: 1
             denomination: 4
-            bonus: ''
+            bonus: '@mod'
             types:
               - fire
             scaling:
