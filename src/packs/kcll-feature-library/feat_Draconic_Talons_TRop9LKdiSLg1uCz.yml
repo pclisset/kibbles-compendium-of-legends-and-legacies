@@ -17,6 +17,9 @@ system:
       a creature with a talon, that talon can only attack that creature. The
       talons last until you dismiss them as a bonus
       action.</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.Svf6Wmd4TPFGMZ2q]{Draconic
+      Talons}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.hJ7lN2pT8wZ4bE9c]{Draconic
+      Talons}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.kM5oQ9sW3zA7eH4f]{Draconic
+      Talons}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.nP8rT3vZ6cD1hK7i]{Draconic
       Talons}</p>
     chat: ''
   identifier: draconic-talons
