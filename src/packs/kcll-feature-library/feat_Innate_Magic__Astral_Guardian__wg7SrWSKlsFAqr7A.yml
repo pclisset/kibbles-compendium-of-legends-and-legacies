@@ -183,7 +183,7 @@ system:
         requireMagic: false
     sIsgqJfoksX9h4tf:
       type: forward
-      name: Detect Magic: Use Endurance Dice
+      name: Detect Magic [Use Endurance Dice]
       _id: sIsgqJfoksX9h4tf
       sort: 150000
       activation:
@@ -216,7 +216,7 @@ system:
         requireMagic: false
     EcuwCmRAkoi8OqZS:
       type: forward
-      name: Misty Step: Use Endurance Dice
+      name: Misty Step [Use Endurance Dice]
       _id: EcuwCmRAkoi8OqZS
       sort: 300000
       activation:
@@ -249,7 +249,7 @@ system:
         requireMagic: false
     JQ1AGhKLWKjc96kU:
       type: forward
-      name: Dimension Door: Use Endurance Dice
+      name: Dimension Door [Use Endurance Dice]
       _id: JQ1AGhKLWKjc96kU
       sort: 600000
       activation:
@@ -461,7 +461,7 @@ system:
         requireMagic: false
     YfUhP9oSvdMHaISP:
       type: forward
-      name: Arcane Conduit: Use Endurance Dice
+      name: Arcane Conduit [Use Endurance Dice]
       _id: YfUhP9oSvdMHaISP
       sort: 187500
       activation:
@@ -494,7 +494,7 @@ system:
         requireMagic: false
     Tjonmoep0YYEY9sc:
       type: forward
-      name: Ghost Step: Use Endurance Dice
+      name: Ghost Step [Use Endurance Dice]
       _id: Tjonmoep0YYEY9sc
       sort: 375000
       activation:
@@ -527,7 +527,7 @@ system:
         requireMagic: false
     cKKRwEmCNJBZ01Rp:
       type: forward
-      name: Dimension Cutter: Use Endurance Dice
+      name: Dimension Cutter [Use Endurance Dice]
       _id: cKKRwEmCNJBZ01Rp
       sort: 393750
       activation:
