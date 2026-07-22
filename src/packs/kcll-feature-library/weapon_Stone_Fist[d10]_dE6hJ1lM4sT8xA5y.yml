@@ -2,7 +2,7 @@ name: Stone Fist
 type: weapon
 img: icons/magic/earth/strike-fist-stone-light.webp
 effects:
-  - _id: tMUs8aJkPlSNXi8A
+  - _id: rS2vX6zA9gH4lO1m
     changes:
       - key: system.attributes.ac.bonus
         mode: 2
@@ -37,7 +37,7 @@ effects:
     description: ''
     statuses: []
     sort: 0
-    _key: '!items.effects!iX0GwM8r98O2FCmk.tMUs8aJkPlSNXi8A'
+    _key: '!items.effects!iX0GwM8r98O2FCmk.rS2vX6zA9gH4lO1m'
 flags:
   core: {}
   dnd5e:
