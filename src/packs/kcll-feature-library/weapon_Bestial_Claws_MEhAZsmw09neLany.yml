@@ -4,8 +4,8 @@ _id: MEhAZsmw09neLany
 img: icons/creatures/claws/claw-bear-paw-swipe-brown.webp
 system:
   activities:
-    pMWGNNddfgD9cHJ5:
-      _id: pMWGNNddfgD9cHJ5
+    dnd5eactivity000:
+      _id: dnd5eactivity000
       type: attack
       sort: 0
       activation:
@@ -44,17 +44,8 @@ system:
         type: {}
       damage: 
         critical: {}
-        base:
-          number: 1
-          denomination: 8
-          types:
-            - slashing
-          custom:
-            enabled: false
-            formula: ''
-          bonus: '@mod'  
-          scaling:
-            number: 1
+        includeBase: true
+        parts: []
       flags: {}
       visibility:
         level: {}
@@ -177,7 +168,7 @@ system:
         enabled: false
       scaling:
         number: 1
-      bonus: ''
+      bonus: '@mod'
     versatile:
       number: null
       denomination: null

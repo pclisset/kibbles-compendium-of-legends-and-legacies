@@ -256,7 +256,8 @@ system:
       value: {}
       title: Endurance Die
       hint: ''
-    - type: Trait
+    - _id: HGi3ukc8zZnCVCxN
+      type: Trait
       level: 1
       configuration:
         grants:
@@ -266,10 +267,7 @@ system:
         allowReplacements: false
         choices: []
       value:
-        chosen:
-          - saves:str
-          - saves:wis
-      _id: HGi3ukc8zZnCVCxN
+        chosen: []
       title: ''
       hint: ''
       classRestriction: primary

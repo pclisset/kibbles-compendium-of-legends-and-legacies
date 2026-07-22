@@ -1,6 +1,6 @@
-name: Primal Flames
+name: Lashing Vine
 type: weapon
-img: icons/magic/fire/flame-burning-fist-strike.webp
+img: icons/magic/nature/root-vine-coiled-crook.webp
 effects: []
 flags:
   core: {}
@@ -11,21 +11,27 @@ flags:
 system:
   description:
     value: >-
-      <p>You conjure flames around one of your hands. This becomes a one handed
-      natural melee weapon that deals 1d6 fire damage on hit, and has the Light,
-      Thrown (30/90), and Special properties. It sheds 20 feet of bright light
-      and an additional 20 feet of dim light while manifested.</p>
-
-      <p><strong>Special:</strong> This weapon counts as a free hand for the
-      purposes of grappling. When you succeed a grapple check with it, the
-      target takes 1d6 fire damage. When you throw it, the flames reignite in
-      your hand immediately.</p>
-
-      <p>All die sizes:</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.Cuc92BzjS2jUiuh5]{Primal 
-      Flames}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.zA2dF6hI9oP4tW1u]{Primal 
-      Flames(d8)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.aB3eG7iJ1pQ5uX2v]{Primal
-      Flames(d10)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.bC4fH8jK2qR6vY3w]{Primal
-      Flames(d12)}</p>
+      <p>A natural one handed melee weapon. Deals 1d6 slashing damage on hit,
+      and has the Light, Reach, and Special Properties.</p><p>Special: This
+      weapon has the following benefits:</p><ul><li><strong>Grappling
+      Weapon.</strong> When you hit a creature with this weapon, you can attempt
+      to initiate a grapple against that creature as a bonus action. If you are
+      grappling a creature with it, you can only use it to attack the creature
+      it is grappling.</li><li><strong>Restraining Vines.</strong> ou can make
+      a grapple check with this weapon targeting a Large or smaller creature you 
+      are currently grappling with. On success, the creature is restrained
+      while grappled this way.</li><li><strong>Reaching Grapples.</strong> You
+      can grapple creatures with this weapon with a reach equal to the weapon’s
+      reach. If a creature more than 5 feet away from you is grappled or
+      restrained by you with this weapon their movement is not reduced to zero,
+      but they can only move toward you. Once they are within 5 feet of you,
+      their movement speed becomes zero.</li><li><strong>Grappling Larger
+      Creatures.</strong> You can attempt to grapple creatures up to two sizes
+      larger than you when initiating a grapple with this weapon, but creatures
+      two sizes larger than you have their movement speed reduced by half,
+      rather than reduced to zero. If they move out of range of your grapple,
+      you can choose to release them, or be pulled along with their
+      movement.</li></ul>
     chat: ''
   source:
     custom: ''
@@ -46,8 +52,8 @@ system:
   identified: true
   cover: null
   range:
-    value: 30
-    long: 90
+    value: 10
+    long: null
     units: ft
     reach: null
   uses:
@@ -58,7 +64,7 @@ system:
     versatile:
       number: null
       denomination: null
-      bonus: '@mod'
+      bonus: ''
       types: []
       custom:
         enabled: false
@@ -69,10 +75,10 @@ system:
         formula: ''
     base:
       number: 1
-      denomination: 6
-      bonus: ''
+      denomination: 10
+      bonus: '@mod'
       types:
-        - fire
+        - slashing
       custom:
         enabled: false
         formula: ''
@@ -89,8 +95,8 @@ system:
     conditions: ''
   properties:
     - lgt
+    - rch
     - spc
-    - thr
   proficient: 1
   unidentified:
     description: ''
@@ -121,7 +127,7 @@ system:
         override: false
       effects: []
       range:
-        value: '30'
+        value: '10'
         units: ft
         special: ''
         override: false
@@ -166,13 +172,13 @@ system:
         requireAttunement: false
         requireIdentification: false
         requireMagic: false
-    a7Nz08kdCJscJWBp:
-      type: damage
-      name: Grapple Damage
-      _id: a7Nz08kdCJscJWBp
+    zn4fNV3yVNrcknSX:
+      type: check
+      name: Grapple
+      _id: zn4fNV3yVNrcknSX
       sort: 0
       activation:
-        type: action
+        type: bonus
         value: null
         override: false
         condition: ''
@@ -206,27 +212,20 @@ system:
         spent: 0
         recovery: []
         max: ''
-      damage:
-        critical:
-          allow: false
-        parts:
-          - custom:
-              enabled: false
-              formula: ''
-            number: 1
-            denomination: 6
-            bonus: ''
-            types:
-              - fire
-            scaling:
-              number: 1
+      check:
+        associated:
+          - ath
+        dc:
+          calculation: ''
+          formula: '10'
+        ability: ''
       flags: {}
       visibility:
         level: {}
         requireAttunement: false
         requireIdentification: false
         requireMagic: false
-  identifier: primal-flames
+  identifier: lashing-vine
   container: null
   attuned: false
   ammunition: {}
@@ -235,18 +234,18 @@ system:
   crew:
     value: []
 _stats:
-  compendiumSource: Item.dLDnNmmqJNRpbbDQ
+  compendiumSource: Item.5j095Jlu3IGvX1a8
   duplicateSource: null
   exportSource: null
   coreVersion: '13.351'
   systemId: dnd5e
   systemVersion: 5.2.0
-  createdTime: 1764610560506
+  createdTime: 1764610556302
   modifiedTime: null
   lastModifiedBy: null
 folder: null
-sort: 40400000
+sort: 35900000
 ownership:
   default: 0
-_id: Cuc92BzjS2jUiuh5
-_key: '!items!Cuc92BzjS2jUiuh5'
+_id: uW6yA1cD4jK8oR5p
+_key: '!items!uW6yA1cD4jK8oR5p'

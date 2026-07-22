@@ -4,8 +4,8 @@ _id: hJ7lN2pT8wZ4bE9c
 img: icons/creatures/claws/claw-scaled-red.webp
 system:
   activities:
-    iK3mO7qU1xA5cF2d:
-      _id: iK3mO7qU1xA5cF2d
+    dnd5eactivity000:
+      _id: dnd5eactivity000
       type: attack
       sort: 0
       activation:

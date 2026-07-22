@@ -23,7 +23,6 @@ system:
       Claws(d8)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.rT3vX7zA1gH5lO2m]{Icy
       Claws(d10)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.sU4wY8aB2hI6mP3n]{Icy
       Claws(d12)}</p>
-
     chat: ''
   source:
     custom: ''
@@ -96,73 +95,6 @@ system:
     value: natural
     baseItem: ''
   activities:
-    dnd5eactivity000:
-      _id: dnd5eactivity000
-      type: attack
-      activation:
-        type: action
-        value: 1
-        condition: ''
-        override: false
-      consumption:
-        targets: []
-        scaling:
-          allowed: false
-          max: ''
-        spellSlot: true
-      description:
-        chatFlavor: ''
-      duration:
-        concentration: false
-        units: inst
-        special: ''
-        override: false
-      effects: []
-      range:
-        units: ft
-        special: ''
-        override: false
-      target:
-        template:
-          count: ''
-          contiguous: false
-          type: ''
-          size: ''
-          width: ''
-          height: ''
-          units: ft
-        affects:
-          count: '1'
-          type: creature
-          choice: false
-          special: ''
-        prompt: true
-        override: false
-      uses:
-        spent: 0
-        max: ''
-        recovery: []
-      attack:
-        ability: ''
-        bonus: ''
-        critical:
-          threshold: null
-        flat: false
-        type:
-          value: melee
-          classification: weapon
-      damage:
-        critical:
-          bonus: ''
-        includeBase: true
-        parts: []
-      sort: 0
-      flags: {}
-      visibility:
-        level: {}
-        requireAttunement: false
-        requireIdentification: false
-        requireMagic: false
     5cKbrB9AR3fw9iL3:
       type: damage
       name: Grapple Damage
@@ -223,6 +155,176 @@ system:
         requireAttunement: false
         requireIdentification: false
         requireMagic: false
+    kL4oQ8sT2zA6eH3f:
+      type: attack
+      name: Icy Claws (Split Colder)
+      _id: kL4oQ8sT2zA6eH3f
+      sort: 100
+      activation:
+        type: action
+        value: 1
+        condition: ''
+        override: false
+      consumption:
+        targets: []
+        scaling:
+          allowed: false
+          max: ''
+        spellSlot: true
+      description:
+        chatFlavor: 'Split damage (d8+ threshold). Fixed 1d4 slashing + growing 1d4 cold.'
+      duration:
+        concentration: false
+        units: inst
+        special: ''
+        override: false
+      effects: []
+      range:
+        units: ft
+        special: ''
+        override: false
+      target:
+        template:
+          count: ''
+          contiguous: false
+          type: ''
+          size: ''
+          width: ''
+          height: ''
+          units: ft
+        affects:
+          count: '1'
+          type: creature
+          choice: false
+          special: ''
+        prompt: true
+        override: false
+      uses:
+        spent: 0
+        max: ''
+        recovery: []
+      attack:
+        ability: ''
+        bonus: ''
+        critical:
+          threshold: null
+        flat: false
+        type:
+          value: melee
+          classification: weapon
+      damage:
+        critical:
+          bonus: ''
+        includeBase: false
+        parts:
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 4
+            bonus: ''
+            types:
+              - slashing
+            scaling:
+              number: 0
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 6
+            bonus: '@mod'
+            types:
+              - cold
+            scaling:
+              number: 0
+    lM5pR9tU3aB7fI4g:
+      type: attack
+      name: Icy Claws (Split Sharper)
+      _id: lM5pR9tU3aB7fI4g
+      sort: 100
+      activation:
+        type: action
+        value: 1
+        condition: ''
+        override: false
+      consumption:
+        targets: []
+        scaling:
+          allowed: false
+          max: ''
+        spellSlot: true
+      description:
+        chatFlavor: 'Split damage (d8+ threshold). Growing 1d4 slashing + fixed 1d4 slashing.'
+      duration:
+        concentration: false
+        units: inst
+        special: ''
+        override: false
+      effects: []
+      range:
+        units: ft
+        special: ''
+        override: false
+      target:
+        template:
+          count: ''
+          contiguous: false
+          type: ''
+          size: ''
+          width: ''
+          height: ''
+          units: ft
+        affects:
+          count: '1'
+          type: creature
+          choice: false
+          special: ''
+        prompt: true
+        override: false
+      uses:
+        spent: 0
+        max: ''
+        recovery: []
+      attack:
+        ability: ''
+        bonus: ''
+        critical:
+          threshold: null
+        flat: false
+        type:
+          value: melee
+          classification: weapon
+      damage:
+        critical:
+          bonus: ''
+        includeBase: false
+        parts:
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 6
+            bonus: '@mod'
+            types:
+              - slashing
+            scaling:
+              number: 0
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 4
+            bonus: ''
+            types:
+              - cold
+            scaling:
+              number: 0
+      flags: {}
+      visibility:
+        level: {}
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
   identifier: icy-claws
   container: null
   attuned: false
@@ -245,5 +347,5 @@ folder: null
 sort: 75500000
 ownership:
   default: 0
-_id: kieapJ0gyuf9sb6g
-_key: '!items!kieapJ0gyuf9sb6g'
+_id: rT3vX7zA1gH5lO2m
+_key: '!items!rT3vX7zA1gH5lO2m'

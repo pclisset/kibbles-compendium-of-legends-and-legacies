@@ -14,7 +14,10 @@ system:
       grappling a creature with a claw, that claw can only attack that creature.
       The claws last until you dismiss them as a bonus
       action.</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.MEhAZsmw09neLany]{Bestial
-      Claws}</p>
+      Claws}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.fG8jL3nO6uV1zC7a]{Bestial
+      Claws(d10)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.gH9kM4oP7vW2aD8b]{Bestial
+      Claws(d12)}</p>
+      
     chat: ''
   source:
     rules: '2014'

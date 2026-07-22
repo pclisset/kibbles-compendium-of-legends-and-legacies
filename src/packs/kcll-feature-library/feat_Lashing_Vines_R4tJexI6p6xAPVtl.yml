@@ -12,7 +12,10 @@ system:
       You can manifest them in one or both hands. The vines last until you
       dismiss them as a bonus
       action.</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.9Bh8sqtf4RnwLOBF]{Lashing
-      Vine}</p>
+      Vine}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.tV5xZ9bC3iJ7nQ4o]{Lashing
+      Vine(d8)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.uW6yA1cD4jK8oR5p]{Lashing
+      Vine(d10)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.vX7zB2dE5kL9pS6q]{Lashing
+      Vine(d12)}</p>
     chat: ''
   source:
     rules: '2014'

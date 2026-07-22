@@ -13,7 +13,10 @@ system:
       <p>Starting at 1st level, you gain the ability to form up to two astral
       arms as a bonus action.
       </p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.euUAu06eYIYDNIiv]{Astral
-      Arm}</p><p>These arms last until you fall unconscious or you dismiss them
+      Arm}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.hI1lN5pQ8wX3bE9c]{Astral
+      Arm(d6)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.iJ2mO6qR9xY4cF1d]{Astral
+      Arm(d8)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.jK3nP7rS1yZ5dG2e]{Astral
+      Arm(d10)}</p><p>These arms last until you fall unconscious or you dismiss them
       as a bonus action. The maximum number of arms you can form increases to 4
       at 9th level, and 6 at 17th level. The number of arms do not affect the
       number of attacks you can make, but the arms can be used to grapple

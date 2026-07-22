@@ -1,7 +1,43 @@
-name: Primal Flames
+name: Stone Fist
 type: weapon
-img: icons/magic/fire/flame-burning-fist-strike.webp
-effects: []
+img: icons/magic/earth/strike-fist-stone-light.webp
+effects:
+  - _id: tMUs8aJkPlSNXi8A
+    changes:
+      - key: system.attributes.ac.bonus
+        mode: 2
+        value: '+1'
+        priority: 20
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    origin: Compendium.world.kibbles-warden.EwKOnaQVrQPB9gU2
+    transfer: true
+    flags: {}
+    tint: '#ffffff'
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.0
+      lastModifiedBy: null
+      modifiedTime: null
+    name: Stone Fist AC
+    img: icons/magic/earth/strike-fist-stone-light.webp
+    type: base
+    system: {}
+    description: ''
+    statuses: []
+    sort: 0
+    _key: '!items.effects!iX0GwM8r98O2FCmk.tMUs8aJkPlSNXi8A'
 flags:
   core: {}
   dnd5e:
@@ -11,21 +47,12 @@ flags:
 system:
   description:
     value: >-
-      <p>You conjure flames around one of your hands. This becomes a one handed
-      natural melee weapon that deals 1d6 fire damage on hit, and has the Light,
-      Thrown (30/90), and Special properties. It sheds 20 feet of bright light
-      and an additional 20 feet of dim light while manifested.</p>
-
-      <p><strong>Special:</strong> This weapon counts as a free hand for the
-      purposes of grappling. When you succeed a grapple check with it, the
-      target takes 1d6 fire damage. When you throw it, the flames reignite in
-      your hand immediately.</p>
-
-      <p>All die sizes:</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.Cuc92BzjS2jUiuh5]{Primal 
-      Flames}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.zA2dF6hI9oP4tW1u]{Primal 
-      Flames(d8)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.aB3eG7iJ1pQ5uX2v]{Primal
-      Flames(d10)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.bC4fH8jK2qR6vY3w]{Primal
-      Flames(d12)}</p>
+      <p>A hardened limb of stone. This becomes a natural one handed melee
+      weapon that deals 1d6 bludgeoning damage on hit, and has the Light and
+      Special properties.</p><p><strong>Special:</strong> You gain +1 to your AC
+      while wielding one of these weapons in each hand (two or more of these if
+      you have more than 2 hands, you cannot benefit from this bonus and the
+      bonus AC of a shield).</p>
     chat: ''
   source:
     custom: ''
@@ -42,12 +69,12 @@ system:
     denomination: gp
   attunement: ''
   equipped: false
-  rarity: common
+  rarity: ''
   identified: true
   cover: null
   range:
-    value: 30
-    long: 90
+    value: null
+    long: null
     units: ft
     reach: null
   uses:
@@ -69,10 +96,10 @@ system:
         formula: ''
     base:
       number: 1
-      denomination: 6
+      denomination: 8
       bonus: ''
       types:
-        - fire
+        - bludgeoning
       custom:
         enabled: false
         formula: ''
@@ -90,7 +117,6 @@ system:
   properties:
     - lgt
     - spc
-    - thr
   proficient: 1
   unidentified:
     description: ''
@@ -121,7 +147,7 @@ system:
         override: false
       effects: []
       range:
-        value: '30'
+        value: '5'
         units: ft
         special: ''
         override: false
@@ -166,67 +192,7 @@ system:
         requireAttunement: false
         requireIdentification: false
         requireMagic: false
-    a7Nz08kdCJscJWBp:
-      type: damage
-      name: Grapple Damage
-      _id: a7Nz08kdCJscJWBp
-      sort: 0
-      activation:
-        type: action
-        value: null
-        override: false
-        condition: ''
-      consumption:
-        scaling:
-          allowed: false
-        spellSlot: true
-        targets: []
-      description:
-        chatFlavor: ''
-      duration:
-        units: inst
-        concentration: false
-        override: false
-      effects: []
-      range:
-        override: false
-        units: self
-      target:
-        template:
-          contiguous: false
-          units: ft
-          type: ''
-        affects:
-          choice: false
-          count: ''
-          type: ''
-        override: false
-        prompt: true
-      uses:
-        spent: 0
-        recovery: []
-        max: ''
-      damage:
-        critical:
-          allow: false
-        parts:
-          - custom:
-              enabled: false
-              formula: ''
-            number: 1
-            denomination: 6
-            bonus: ''
-            types:
-              - fire
-            scaling:
-              number: 1
-      flags: {}
-      visibility:
-        level: {}
-        requireAttunement: false
-        requireIdentification: false
-        requireMagic: false
-  identifier: primal-flames
+  identifier: stone-fist
   container: null
   attuned: false
   ammunition: {}
@@ -235,18 +201,18 @@ system:
   crew:
     value: []
 _stats:
-  compendiumSource: Item.dLDnNmmqJNRpbbDQ
+  compendiumSource: Item.MFHrMi6JXzSRgXZC
   duplicateSource: null
   exportSource: null
   coreVersion: '13.351'
   systemId: dnd5e
   systemVersion: 5.2.0
-  createdTime: 1764610560506
+  createdTime: 1764610587492
   modifiedTime: null
   lastModifiedBy: null
 folder: null
-sort: 40400000
+sort: 73400000
 ownership:
   default: 0
-_id: Cuc92BzjS2jUiuh5
-_key: '!items!Cuc92BzjS2jUiuh5'
+_id: cD5gI9kL3rS7wZ4x
+_key: '!items!cD5gI9kL3rS7wZ4x'

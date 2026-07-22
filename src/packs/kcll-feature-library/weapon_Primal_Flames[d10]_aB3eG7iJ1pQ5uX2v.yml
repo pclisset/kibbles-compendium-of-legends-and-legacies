@@ -69,7 +69,7 @@ system:
         formula: ''
     base:
       number: 1
-      denomination: 6
+      denomination: 10
       bonus: ''
       types:
         - fire
@@ -248,5 +248,5 @@ folder: null
 sort: 40400000
 ownership:
   default: 0
-_id: Cuc92BzjS2jUiuh5
-_key: '!items!Cuc92BzjS2jUiuh5'
+_id: aB3eG7iJ1pQ5uX2v
+_key: '!items!aB3eG7iJ1pQ5uX2v'

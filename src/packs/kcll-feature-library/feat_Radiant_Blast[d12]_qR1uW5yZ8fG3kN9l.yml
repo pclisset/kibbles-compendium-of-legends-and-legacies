@@ -1,0 +1,301 @@
+name: Radiant Blast
+type: feat
+img: icons/magic/light/beam-rays-orange-large.webp
+system:
+  description:
+    value: >-
+      <p>At 1st level, you gain the ability to gather and release fiery radiant
+      power from your hands or a weapon you are wielding. Radiant Blasts are a
+      ranged natural weapon attack with a normal range of 60 feet, and a long
+      range of 120 feet, that deal 1d6 fire or radiant damage (your choice). If
+      the damage die increases to 1d8 (through Warden features that increase the
+      damage of your natural weapons), the damage becomes 1d4 fire damage and
+      1d4 radiant damage. You choose which damage type to add your modifier to
+      when you deal damage. You can use your Strength or Wisdom (your choice) in
+      place of your Dexterity for the attack and damage rolls of this
+      ability.</p>
+    chat: ''
+  source:
+    rules: '2014'
+    revision: 1
+    book: ''
+    custom: ''
+    license: CC-BY-4.0
+  uses:
+    max: ''
+    spent: 0
+    recovery: []
+  type:
+    value: class
+    subtype: ''
+  requirements: Sunwatcher 1
+  identifier: radiant-blast
+  activities:
+    si1jTcx9BzPXBFn4:
+      type: attack
+      name: Radiant Blast
+      _id: si1jTcx9BzPXBFn4
+      sort: 0
+      activation:
+        type: action
+        value: null
+        override: false
+        condition: ''
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets: []
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects: []
+      range:
+        override: false
+        units: ft
+        special: ''
+        value: '120'
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          count: ''
+          type: creature
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      attack:
+        critical:
+          threshold: null
+        flat: false
+        type:
+          value: ranged
+          classification: weapon
+        ability: str
+        bonus: ''
+      damage:
+        critical:
+          bonus: ''
+        includeBase: true
+        parts:
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 6
+            bonus: '@mod'
+            types:
+              - fire
+              - radiant
+            scaling:
+              number: 1
+      flags: {}
+      visibility:
+        level: {}
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+    fH5jL9nR4uX2zC7a:
+      type: attack
+      name: Radiant Blast (Split Brighter)
+      _id: fH5jL9nR4uX2zC7a
+      sort: 100
+      activation:
+        type: action
+        value: null
+        override: false
+        condition: ''
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets: []
+      description:
+        chatFlavor: 'Split damage (d8+ threshold). Fixed 1d4 fire + growing 1d4 radiant.'
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects: []
+      range:
+        override: false
+        units: ft
+        special: ''
+        value: '120'
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          count: ''
+          type: creature
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      attack:
+        critical:
+          threshold: null
+        flat: false
+        type:
+          value: ranged
+          classification: weapon
+        ability: [str, dex, wis]
+        bonus: ''
+      damage:
+        critical:
+          bonus: ''
+        includeBase: false
+        parts:
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 4
+            bonus: ''
+            types:
+              - fire
+            scaling:
+              number: 0
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 8
+            bonus: '@mod'
+            types:
+              - radiant
+            scaling:
+              number: 0
+      flags: {}
+      visibility:
+        level: {}
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+  dG2iK8mQ3tW7yB6e:
+      type: attack
+      name: Radiant Blast (Split Hotter)
+      _id: dG2iK8mQ3tW7yB6e
+      sort: 100
+      activation:
+        type: action
+        value: null
+        override: false
+        condition: ''
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets: []
+      description:
+        chatFlavor: 'Split damage. Growing fire + fixed radiant.'
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects: []
+      range:
+        override: false
+        units: ft
+        special: ''
+        value: '120'
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          count: ''
+          type: creature
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      attack:
+        critical:
+          threshold: null
+        flat: false
+        type:
+          value: ranged
+          classification: weapon
+        ability: [str, dex, wis]
+        bonus: ''
+      damage:
+        critical:
+          bonus: ''
+        includeBase: false
+        parts:
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 8
+            bonus: '@mod'
+            types:
+              - fire
+            scaling:
+              number: 0
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 4
+            bonus: ''
+            types:
+              - radiant
+            scaling:
+              number: 0
+      flags: {}
+      visibility:
+        level: {}
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+  enchant: {}
+  prerequisites:
+    level: null
+    items: []
+    repeatable: false
+  properties: []
+  advancement: []
+  crewed: false
+effects: []
+flags:
+  core: {}
+  dnd5e:
+    riders:
+      activity: []
+      effect: []
+_stats:
+  compendiumSource: Item.d5XwwrJjp7tJk3a3
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.0
+  createdTime: 1764610577243
+  modifiedTime: null
+  lastModifiedBy: null
+folder: null
+sort: 60600000
+ownership:
+  default: 0
+_id: qR1uW5yZ8fG3kN9l
+_key: '!items!qR1uW5yZ8fG3kN9l'

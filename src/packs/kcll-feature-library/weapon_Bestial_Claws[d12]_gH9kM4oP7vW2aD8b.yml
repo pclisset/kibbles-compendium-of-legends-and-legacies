@@ -1,7 +1,7 @@
-name: Draconic Talons
+name: Bestial Claws
 type: weapon
-_id: Svf6Wmd4TPFGMZ2q
-img: icons/creatures/claws/claw-scaled-red.webp
+_id: gH9kM4oP7vW2aD8b
+img: icons/creatures/claws/claw-bear-paw-swipe-brown.webp
 system:
   activities:
     dnd5eactivity000:
@@ -42,7 +42,7 @@ system:
           threshold: null
         flat: false
         type: {}
-      damage:
+      damage: 
         critical: {}
         includeBase: true
         parts: []
@@ -52,10 +52,10 @@ system:
         requireAttunement: false
         requireIdentification: false
         requireMagic: false
-    HvyH6RxjT1yT8R6K:
+    x0gH5KZ8J0rMR4Lc:
       type: damage
-      name: Grapple Damage
-      _id: HvyH6RxjT1yT8R6K
+      name: Grappling
+      _id: x0gH5KZ8J0rMR4Lc
       sort: 0
       activation:
         type: action
@@ -118,14 +118,13 @@ system:
     max: ''
   description:
     value: >-
-      <p>A set of draconic talons extending from one of your hands. This becomes
-      a natural one handed melee weapon that deals 1d6 slashing damage on hit,
-      and has the Light and Special properties.</p><p><strong>Special:</strong>
-      This weapon counts as a free hand for the purposes of grappling. When you
-      successfully initiate a grapple with it, the target takes 1d6 slashing
-      damage.</p>
+      <p>A vicious set of claws extending from one of your hands. This becomes a
+      natural one handed melee weapon that deals 1d8 slashing damage on hit, and
+      has the Light and Special properties.</p><p> Special: This weapon counts
+      as a free hand for the purposes of grappling. When you successfully
+      initiate a grapple with it, the target takes 1d6 slashing damage.</p>
     chat: ''
-  identifier: draconic-talons
+  identifier: bestial-claws
   source:
     revision: 1
     rules: '2014'
@@ -162,12 +161,11 @@ system:
   damage:
     base:
       number: 1
-      denomination: 6
+      denomination: 12
       types:
         - slashing
       custom:
         enabled: false
-        formula: ''
       scaling:
         number: 1
       bonus: '@mod'
@@ -194,7 +192,7 @@ system:
     value: []
 effects: []
 folder: null
-sort: 8600000
+sort: 6600000
 ownership:
   default: 0
 flags:
@@ -209,7 +207,7 @@ _stats:
   coreVersion: '13.351'
   systemId: dnd5e
   systemVersion: 5.2.0
-  createdTime: 1764610573374
+  createdTime: 1764610568058
   modifiedTime: null
   lastModifiedBy: null
-_key: '!items!Svf6Wmd4TPFGMZ2q'
+_key: '!items!gH9kM4oP7vW2aD8b'

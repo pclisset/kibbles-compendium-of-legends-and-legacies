@@ -14,7 +14,10 @@ system:
       grappling a creature with your stone fists, that fist can only attack that
       creature. The stone form lasts until you dismiss them as a bonus
       action.</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.iX0GwM8r98O2FCmk]{Stone
-      Fist}</p>
+      Fist}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.cD5gI9kL3rS7wZ4x]{Stone
+      Fist(d8)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.dE6hJ1lM4sT8xA5y]{Stone
+      Fist(d10)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.eF7iK2mN5tU9yB6z]{Stone
+      Fist(d12)}</p>
     chat: ''
   source:
     rules: '2014'

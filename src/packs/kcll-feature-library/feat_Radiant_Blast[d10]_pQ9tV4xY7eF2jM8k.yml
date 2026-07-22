@@ -31,11 +31,11 @@ system:
   requirements: Sunwatcher 1
   identifier: radiant-blast
   activities:
-    dnd5eactivity000:
+    bF4hJ6lN9sU1xA5c:
       type: attack
-      name: Radiant Blast
-      _id: dnd5eactivity000
-      sort: 0
+      name: Radiant Blast (Split Brighter)
+      _id: bF4hJ6lN9sU1xA5c
+      sort: 100
       activation:
         type: action
         value: null
@@ -47,7 +47,7 @@ system:
         spellSlot: true
         targets: []
       description:
-        chatFlavor: ''
+        chatFlavor: 'Split damage. Fixed fire + growing radiant.'
       duration:
         units: inst
         concentration: false
@@ -85,7 +85,89 @@ system:
       damage:
         critical:
           bonus: ''
-        includeBase: true
+        includeBase: false
+        parts:
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 4
+            bonus: ''
+            types:
+              - fire
+            scaling:
+              number: 0
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 6
+            bonus: '@mod'
+            types:
+              - radiant
+            scaling:
+              number: 0
+      flags: {}
+      visibility:
+        level: {}
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+  kXn3mP7qR2wT8vYz:
+      type: attack
+      name: Radiant Blast (Split Hotter)
+      _id: kXn3mP7qR2wT8vYz
+      sort: 100
+      activation:
+        type: action
+        value: null
+        override: false
+        condition: ''
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets: []
+      description:
+        chatFlavor: 'Split damage. Growing fire + fixed radiant.'
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects: []
+      range:
+        override: false
+        units: ft
+        special: ''
+        value: '120'
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          count: ''
+          type: creature
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      attack:
+        critical:
+          threshold: null
+        flat: false
+        type:
+          value: ranged
+          classification: weapon
+        ability: [str, dex, wis]
+        bonus: ''
+      damage:
+        critical:
+          bonus: ''
+        includeBase: false
         parts:
           - custom:
               enabled: false
@@ -95,9 +177,18 @@ system:
             bonus: '@mod'
             types:
               - fire
+            scaling:
+              number: 0
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 4
+            bonus: ''
+            types:
               - radiant
             scaling:
-              number: 1
+              number: 0
       flags: {}
       visibility:
         level: {}
@@ -133,5 +224,5 @@ folder: null
 sort: 60600000
 ownership:
   default: 0
-_id: X4s2OexuLZcwg6PN
-_key: '!items!X4s2OexuLZcwg6PN'
+_id: pQ9tV4xY7eF2jM8k
+_key: '!items!pQ9tV4xY7eF2jM8k'

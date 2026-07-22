@@ -1,6 +1,6 @@
-name: Primal Flames
+name: Lightning Lash
 type: weapon
-img: icons/magic/fire/flame-burning-fist-strike.webp
+img: icons/magic/lightning/bolt-strike-purple-pink.webp
 effects: []
 flags:
   core: {}
@@ -11,21 +11,20 @@ flags:
 system:
   description:
     value: >-
-      <p>You conjure flames around one of your hands. This becomes a one handed
-      natural melee weapon that deals 1d6 fire damage on hit, and has the Light,
-      Thrown (30/90), and Special properties. It sheds 20 feet of bright light
-      and an additional 20 feet of dim light while manifested.</p>
+      <p>You conjure a whip of lightning, tethered to one of your hands. This
+      becomes a one handed natural melee weapon that deals 1d6 lightning damage
+      on hit, and has the Reach, Light, and Special properties. It sheds 10 feet
+      of bright light and an additional 10 feet of dim light while
+      manifested.</p>
 
-      <p><strong>Special:</strong> This weapon counts as a free hand for the
-      purposes of grappling. When you succeed a grapple check with it, the
-      target takes 1d6 fire damage. When you throw it, the flames reignite in
-      your hand immediately.</p>
+      <p><strong>Special:</strong> If you hit a creature with this weapon you
+      can pull the creature up to 5 feet toward you.</p>
 
-      <p>All die sizes:</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.Cuc92BzjS2jUiuh5]{Primal 
-      Flames}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.zA2dF6hI9oP4tW1u]{Primal 
-      Flames(d8)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.aB3eG7iJ1pQ5uX2v]{Primal
-      Flames(d10)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.bC4fH8jK2qR6vY3w]{Primal
-      Flames(d12)}</p>
+      <p>All die sizes:</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.uwXeJaTiHE60ni1K]{Lightning 
+      Lash}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.wY8aC3eF6lM1qT7r]{Lightning 
+      Lash(d8)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.xZ9bD4fG7mN2rU8s]{Lightning
+      Lash(d10)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.yA1cE5gH8nO3sV9t]{Lightning
+      Lash(d12)}</p>
     chat: ''
   source:
     custom: ''
@@ -42,12 +41,12 @@ system:
     denomination: gp
   attunement: ''
   equipped: false
-  rarity: common
+  rarity: ''
   identified: true
   cover: null
   range:
-    value: 30
-    long: 90
+    value: null
+    long: null
     units: ft
     reach: null
   uses:
@@ -58,7 +57,7 @@ system:
     versatile:
       number: null
       denomination: null
-      bonus: '@mod'
+      bonus: ''
       types: []
       custom:
         enabled: false
@@ -69,10 +68,10 @@ system:
         formula: ''
     base:
       number: 1
-      denomination: 6
-      bonus: ''
+      denomination: 10
+      bonus: '@mod'
       types:
-        - fire
+        - lightning
       custom:
         enabled: false
         formula: ''
@@ -89,8 +88,8 @@ system:
     conditions: ''
   properties:
     - lgt
+    - rch
     - spc
-    - thr
   proficient: 1
   unidentified:
     description: ''
@@ -121,7 +120,7 @@ system:
         override: false
       effects: []
       range:
-        value: '30'
+        value: '10'
         units: ft
         special: ''
         override: false
@@ -166,67 +165,7 @@ system:
         requireAttunement: false
         requireIdentification: false
         requireMagic: false
-    a7Nz08kdCJscJWBp:
-      type: damage
-      name: Grapple Damage
-      _id: a7Nz08kdCJscJWBp
-      sort: 0
-      activation:
-        type: action
-        value: null
-        override: false
-        condition: ''
-      consumption:
-        scaling:
-          allowed: false
-        spellSlot: true
-        targets: []
-      description:
-        chatFlavor: ''
-      duration:
-        units: inst
-        concentration: false
-        override: false
-      effects: []
-      range:
-        override: false
-        units: self
-      target:
-        template:
-          contiguous: false
-          units: ft
-          type: ''
-        affects:
-          choice: false
-          count: ''
-          type: ''
-        override: false
-        prompt: true
-      uses:
-        spent: 0
-        recovery: []
-        max: ''
-      damage:
-        critical:
-          allow: false
-        parts:
-          - custom:
-              enabled: false
-              formula: ''
-            number: 1
-            denomination: 6
-            bonus: ''
-            types:
-              - fire
-            scaling:
-              number: 1
-      flags: {}
-      visibility:
-        level: {}
-        requireAttunement: false
-        requireIdentification: false
-        requireMagic: false
-  identifier: primal-flames
+  identifier: lightning-lash
   container: null
   attuned: false
   ammunition: {}
@@ -235,18 +174,18 @@ system:
   crew:
     value: []
 _stats:
-  compendiumSource: Item.dLDnNmmqJNRpbbDQ
+  compendiumSource: Item.k7ebf2dJ2tKfECi4
   duplicateSource: null
   exportSource: null
   coreVersion: '13.351'
   systemId: dnd5e
   systemVersion: 5.2.0
-  createdTime: 1764610560506
+  createdTime: 1764610599131
   modifiedTime: null
   lastModifiedBy: null
 folder: null
-sort: 40400000
+sort: 86700000
 ownership:
   default: 0
-_id: Cuc92BzjS2jUiuh5
-_key: '!items!Cuc92BzjS2jUiuh5'
+_id: xZ9bD4fG7mN2rU8s
+_key: '!items!xZ9bD4fG7mN2rU8s'

@@ -19,6 +19,12 @@ system:
 
       <p><strong>Special:</strong> If you hit a creature with this weapon you
       can pull the creature up to 5 feet toward you.</p>
+
+      <p>All die sizes:</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.uwXeJaTiHE60ni1K]{Lightning 
+      Lash}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.wY8aC3eF6lM1qT7r]{Lightning 
+      Lash(d8)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.xZ9bD4fG7mN2rU8s]{Lightning
+      Lash(d10)}</p><p>@UUID[Compendium.kibbles-compendium-of-legends-and-legacies.kcll-feature-library.Item.yA1cE5gH8nO3sV9t]{Lightning
+      Lash(d12)}</p>
     chat: ''
   source:
     custom: ''
