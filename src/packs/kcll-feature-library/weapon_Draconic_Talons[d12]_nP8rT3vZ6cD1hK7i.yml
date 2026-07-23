@@ -162,7 +162,7 @@ system:
   damage:
     base:
       number: 1
-      denomination: 6
+      denomination: 12
       types:
         - slashing
       custom:

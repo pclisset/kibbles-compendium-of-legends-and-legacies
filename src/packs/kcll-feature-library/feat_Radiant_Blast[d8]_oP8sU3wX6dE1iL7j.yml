@@ -1,4 +1,4 @@
-name: Radiant Blast
+name: Radiant Blast [d8]
 type: feat
 img: icons/magic/light/beam-rays-orange-large.webp
 system:
@@ -113,7 +113,7 @@ system:
         requireAttunement: false
         requireIdentification: false
         requireMagic: false
-  9m3Fw629Cr0kjWuf:
+    9m3Fw629Cr0kjWuf:
       type: attack
       name: Radiant Blast (Split Hotter)
       _id: 9m3Fw629Cr0kjWuf
